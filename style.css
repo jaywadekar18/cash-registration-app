@@ -91,3 +91,14 @@ td {
   border-collapse: collapse;
   padding: 0.4rem;
 }
+footer {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.socialMediaImages {
+  margin: 5px;
+}
+#socialMedia{
+  margin-top: 10px !important;
+}
