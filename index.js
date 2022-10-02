@@ -8,7 +8,7 @@ const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", function validateBillAndCashAmount() {
   hideMessage();
-  if (billAmount.value > 0) {
+  if (Number(billAmount.value) > 0 && Number(cashGiven.value)> 0) {
     if (Number(cashGiven.value) >= Number(billAmount.value)) {
       const amountToBeReturned =
         Number(cashGiven.value) - Number(billAmount.value);
@@ -29,7 +29,6 @@ function calculateChange(amount) {
       let wholeNum = Math.floor(floatNum);
       amount = amount - availableNotes[i] * wholeNum;
       noOfNotes[i].innerText = wholeNum;
-      console.log(availableNotes[i], "-->", wholeNum);
     }
   }
 }
